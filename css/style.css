@@ -86,6 +86,29 @@ body {
   padding: 63px 24px;
   color: #ffffff;
 }
+
+/* Portfolio cards */
+.portfolio-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  color: var(--secondary-text-color);
+}
+
+.portfolio-item-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.portfolio-section {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
 /* Header */
 .header {
   border-bottom: 1px solid #ececec;
@@ -144,6 +167,7 @@ body {
   text-transform: uppercase;
   color: var(--white-text);
 }
+
 /* Our team */
 .name-title {
   font-weight: 500;
@@ -341,52 +365,7 @@ body {
   border-radius: 4px;
   border: 0;
 }
-.backdrop.is-hidden {
-  visibility: none;
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.7);
-}
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms var(--timing-function),
-    visibility 250ms var(--timing-function);
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms;
-  min-width: 528px;
-  min-height: 581px;
-  background-color: #ffffff;
-  box-shadow: 3px 0px 1px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.2),
-    1px 0px 1px rgba(0, 0, 0, 0.14);
-  border-radius: 4px;
-}
-.modal-button {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 8px;
-  right: 8px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
+
 /* Features */
 .feature-title {
   font-family: "Roboto", sans-serif;
@@ -467,6 +446,7 @@ body {
 .our-clients-link:focus .our-clients-img {
   color: var(--accent-color);
 }
+
 /* Footer */
 .footer {
   background: #2f303a;
@@ -530,6 +510,7 @@ body {
 .footer-social-img {
   fill: var(--social-networks-color);
 }
+
 /* Footer form */
 .footer-form {
   margin-left: auto;
@@ -588,6 +569,7 @@ body {
 .footer-form .input::placeholder {
   color: var(--contact-link-footer);
 }
+
 /* Portfolio-btn */
 .menu-secondary-btn {
   display: flex;
@@ -621,24 +603,121 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-/* Portfolio cards */
-.portfolio-item-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  margin-bottom: 4px;
-  color: var(--secondary-text-color);
-}
 
-.portfolio-item-description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: var(--main-text-color);
+/* Modal - Backdrop */
+.backdrop.is-hidden {
+  visibility: none;
+  opacity: 0;
+  pointer-events: none;
 }
-.portfolio-section {
-  margin-top: 94px;
-  margin-bottom: 94px;
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms;
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 3px 0px 1px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.2),
+    1px 0px 1px rgba(0, 0, 0, 0.14);
+  border-radius: 4px;
+}
+.modal-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: #212121;
+}
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 10px;
+}
+.modal-label-comment {
+  margin-bottom: 20px;
+}
+.modal-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus {
+  border-color: var(--accent-color);
+}
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus + .modal-input-icon {
+  fill: var(--accent-color);
+}
+.form-comment {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment:focus {
+  border-color: var(--accent-color);
+}
+.form-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
