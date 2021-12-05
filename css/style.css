@@ -356,6 +356,8 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  min-width: 200px;
+  letter-spacing: 0.06em;
   display: block;
   margin: 0 auto;
   cursor: pointer;
@@ -503,9 +505,7 @@ body {
   margin-top: 15px;
   margin-bottom: 20px;
 }
-/* .footer-social-content {
-  padding-top: 15px;
-} */
+
 .footer-social-link {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -516,6 +516,10 @@ body {
 /* Footer form */
 .footer-form-wrapper {
   margin-left: auto;
+}
+
+.footer-form-group {
+  display: flex;
 }
 .footer-form-text {
   text-transform: uppercase;
@@ -528,18 +532,16 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.14;
 }
-.button {
+.subscribe-button {
   display: inline-flex;
   align-items: center;
-  padding: 10px 28px;
   margin-left: 12px;
-  letter-spacing: 0.06em;
 }
 .footer-form-icon {
   fill: currentColor;
   margin-left: 10px;
 }
-.input {
+.subscribe-input {
   outline: none;
   color: currentColor;
   background-color: transparent;
@@ -554,12 +556,12 @@ body {
   transition: border-color 250ms var(--timing-function);
 }
 
-.footer-form .input:hover,
-.footer-form .input:focus {
+.subscribe .subscribe-input:hover,
+.subscribe .subscribe-input:focus {
   border: 1px solid var(--accent-color);
 }
 
-.footer-form .input::placeholder {
+.subscribe .subscribe-input::placeholder {
   color: var(--contact-link-footer);
 }
 
@@ -607,7 +609,7 @@ body {
   width: 1px;
   overflow: hidden;
 }
-/* Modal - Backdrop */
+/* Backdrop - Modal */
 .backdrop.is-hidden {
   visibility: none;
   opacity: 0;
@@ -674,18 +676,20 @@ body {
   color: var(--secondary-text-color);
 }
 .form-fild {
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: var(--main-text-color);
   margin-bottom: 10px;
 }
 .form-fild-comment {
   margin-bottom: 20px;
 }
-.label-wrapper {
+
+.form-label {
+  display: inline-block;
   margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
+
 .input-group-absolute {
   position: relative;
 }
@@ -769,8 +773,4 @@ body {
 
 .form-checkbox:focus + .form-checkbox-label::before {
   border-color: var(--accent-color);
-}
-.modal-form-submit {
-  width: 200px;
-  letter-spacing: 0.06em;
 }
