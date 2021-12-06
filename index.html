@@ -486,13 +486,12 @@
                     <textarea class="form-comment" name="user-comment" id="user-comment"
                         placeholder="Введите текст"></textarea>
                 </div>
-                <div class="form-fild-checkbox">
-                    <input type="checkbox" class="form-checkbox visually-hidden" id="accept-policy" />
-                    <label class="form-checkbox-label" for="accept-policy">
-                        Соглашаюсь с рассылкой и
-                        принимаю&NonBreakingSpace;
-                        <a href="#" class="form-label-link">Условия договора</a>
-                    </label>
+                <div class="checkbox">
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="checkbox-input" name="agreement" value="agreement" />
+                        <span class="checkbox-icon"></span>
+                        Соглашаюсь с рассылкой и принимаю </label>
+                    <a class="conditions" href="">Условия договора</a>
                 </div>
                 <button type="submit" class="modal-form-submit primary-button">Отправить</button>
             </form>
